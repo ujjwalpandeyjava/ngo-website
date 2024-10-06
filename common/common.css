@@ -17,6 +17,10 @@ a {
   color: var(--textColor);
 }
 
+.display_Block {
+  display: inline-block !important;
+}
+
 #header {
   position: sticky;
   top: 0;
@@ -49,6 +53,18 @@ a {
 }
 #header .topBarMenu nav .menuOptions a.eachMenu {
   color: black;
+}
+#header .topBarMenu nav .menuOptions .fa {
+  cursor: pointer;
+}
+#header .topBarMenu nav .menuOptions input#searchInput {
+  display: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 5px 10px;
+}
+#header .topBarMenu nav .menuOptions input#searchInput:focus {
+  outline: 1px solid rgba(190, 190, 190, 0.6);
 }
 #header .sideBarMenu {
   display: none;

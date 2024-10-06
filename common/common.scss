@@ -13,7 +13,9 @@ a {
 	text-decoration: none;
 	color: var(--textColor);
 }
-
+.display_Block {
+	display: inline-block !important;
+}
 #header {
 	position: sticky;
 	top: 0;
@@ -44,6 +46,18 @@ a {
 				gap: 0.76rem;
 				& a.eachMenu {
 					color: black;
+				}
+				& .fa {
+					cursor: pointer;
+				}
+				& input#searchInput {
+					display: none;
+					border: none;
+					border-bottom: 1px solid gray;
+					padding: 5px 10px;
+					&:focus {
+						outline: 1px solid rgba(190, 190, 190, 0.6);
+					}
 				}
 			}
 		}
