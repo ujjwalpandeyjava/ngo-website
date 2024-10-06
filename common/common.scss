@@ -1,17 +1,78 @@
 root {
-	--var1: red;
+	--textColor: black;
+}
+body {
+	position: relative;
 }
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: "Courier New", Courier, monospace;
+}
+a {
+	text-decoration: none;
+	color: var(--textColor);
 }
 
 #header {
+	position: sticky;
+	top: 0;
+	display: block;
+	background-color: white;
+	.topBarMenu {
+		display: block;
+		padding: 0.25rem 0.75rem;
+		background-color: white;
+		nav {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+			& .orgLogo {
+				img {
+					height: 100%;
+					max-height: 55px;
+				}
+			}
+			& .menuOptions {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: flex-end;
+				gap: 0.76rem;
+				& a.eachMenu {
+					color: black;
+				}
+			}
+		}
+	}
+	.sideBarMenu {
+		display: none;
+		position: fixed;
+		height: 100dvh;
+		width: 100dvw;
+		inset: 0;
+		background-color: #5c5c5c8f;
+		& > nav {
+			background-color: white;
+			height: 100%;
+			width: 300px;
+			padding: 0.5rem 0.75rem;
+			& a.eachMenu {
+				width: 100%;
+				outline: none;
+				border: none;
+				cursor: pointer;
+				background-color: rgba(152, 152, 255, 0.322);
+				margin: 0.25rem 0rem;
+				border-bottom: 1px solid rgb(199, 199, 199);
+				padding: 0.5rem;
+			}
+		}
+	}
 }
+
 #footer {
-}
-.home {
-	background-color: orange;
 }

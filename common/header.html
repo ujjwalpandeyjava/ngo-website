@@ -1,9 +1,32 @@
-<!-- header.html -->
+<!-- Add two different menu, one simple top and other on side for small screen -->
+
 <header id="header">
-	<h1>My Website Header</h1>
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="about.html">About</a>
-		<a href="contact.html">Contact</a>
-	</nav>
+	<!-- Sticky top -->
+	<div class="topBarMenu">
+		<nav aria-label="hidden">
+			<div class="orgLogo">
+				<a href="/"><img src="../assets/images/orgLogo.png" alt="Organization logo"></a>
+			</div>
+			<div class="menuOptions">
+				<a class="eachMenu" href="index.html">Home</a>
+				<a class="eachMenu" href="about.html">About Us</a>
+				<a class="eachMenu" href="faq.html">FAQ</a>
+				<a class="eachMenu" href="contact.html">Contact</a>
+				<div class="searchIcon">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<!-- Fixed left -->
+	<div class="sideBarMenu" onclick="navClicked()">
+		<nav aria-label="hidden" role="navigation">
+			<a class="eachMenu" href="index.html">Home</a>
+			<a class="eachMenu" href="about.html">About</a>
+			<a class="eachMenu" href="contact.html">Contact</a>
+		</nav>
+	</div>
+
+	<script src="./header.js"></script>
 </header>
