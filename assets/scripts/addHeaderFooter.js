@@ -13,12 +13,12 @@ $(document).ready(() => {
 	// 	});
 
 	// Add header as first child of the body
-	$.get('./common/header.html', function (htmlText) {
+	$.get('../../header.html', function (htmlText) {
 		document.body.insertAdjacentHTML('afterbegin', htmlText);
 	});
 	// Add header as last child of the body
-	$.get('./common/footer.html', function (htmlText) {
-		// document.body.insertAdjacentHTML('beforeend', htmlText);
+	$.get('../../footer.html', function (htmlText) {
+		document.body.insertAdjacentHTML('beforeend', htmlText);
 	});
 });
 
