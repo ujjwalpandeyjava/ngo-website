@@ -1,6 +1,5 @@
-<!-- Add two different menu, one simple top and other on side for small screen -->
-
 <header id="header">
+
 	<!-- Sticky top -->
 	<div class="topBarMenu">
 		<nav aria-label="hidden">
@@ -21,7 +20,8 @@
 	</div>
 
 	<!-- Fixed left -->
-	<div class="sideBarMenu" onclick="navClicked()">
+	<div class="sideBarMenuIcon" onclick="toggleSideBarMenu()"><i class="fa-solid fa-bars"></i></div>
+	<div class="sideBarMenu" onclick="emptySpaceAction()">
 		<nav aria-label="hidden" role="navigation">
 			<a class="eachMenu" href="index.html">Home</a>
 			<a class="eachMenu" href="about.html">About</a>

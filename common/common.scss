@@ -13,8 +13,11 @@ a {
 	text-decoration: none;
 	color: var(--textColor);
 }
-.display_Block {
+.display_InlineBlock {
 	display: inline-block !important;
+}
+.display_Block {
+	display: block !important;
 }
 #header {
 	position: sticky;
@@ -22,9 +25,8 @@ a {
 	display: block;
 	background-color: white;
 	.topBarMenu {
-		display: block;
 		padding: 0.25rem 0.75rem;
-		background-color: white;
+		display: block;
 		nav {
 			display: flex;
 			flex-direction: row;
@@ -84,6 +86,25 @@ a {
 				border-bottom: 1px solid rgb(199, 199, 199);
 				padding: 0.5rem;
 			}
+		}
+	}
+	.sideBarMenuIcon {
+		padding: 1rem 1.5rem;
+	}
+
+	// Don't show the topBarMenu for small screens
+	@media (max-width: 760px) {
+		.topBarMenu {
+			display: none;
+		}
+	}
+	// Don't show the sideBarMenu for the big screens
+	@media (min-width: 761px) {
+		.sideBarMenuIcon {
+			display: none;
+		}
+		.sideBarMenu {
+			display: none !important;
 		}
 	}
 }

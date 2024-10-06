@@ -17,8 +17,12 @@ a {
   color: var(--textColor);
 }
 
-.display_Block {
+.display_InlineBlock {
   display: inline-block !important;
+}
+
+.display_Block {
+  display: block !important;
 }
 
 #header {
@@ -28,9 +32,8 @@ a {
   background-color: white;
 }
 #header .topBarMenu {
-  display: block;
   padding: 0.25rem 0.75rem;
-  background-color: white;
+  display: block;
 }
 #header .topBarMenu nav {
   display: flex;
@@ -89,4 +92,20 @@ a {
   margin: 0.25rem 0rem;
   border-bottom: 1px solid rgb(199, 199, 199);
   padding: 0.5rem;
+}
+#header .sideBarMenuIcon {
+  padding: 1rem 1.5rem;
+}
+@media (max-width: 760px) {
+  #header .topBarMenu {
+    display: none;
+  }
+}
+@media (min-width: 761px) {
+  #header .sideBarMenuIcon {
+    display: none;
+  }
+  #header .sideBarMenu {
+    display: none !important;
+  }
 }/*# sourceMappingURL=common.css.map */

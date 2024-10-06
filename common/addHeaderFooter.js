@@ -1,28 +1,31 @@
-fetch('./common/header.html')
-	.then(response => response.text())
-	.then(data => {
-		// Insert the HTML content directly as the first child of the body
-		document.body.insertAdjacentHTML('afterbegin', data);
-	});
+$(document).ready(() => {
+	// fetch('./common/header.html')
+	// 	.then(response => response.text())
+	// 	.then(htmlText => {
+	// 		// Insert the HTML content directly as the first child of the body
+	// 		document.body.insertAdjacentHTML('afterbegin', htmlText);
+	// 	});
+	// fetch('./common/footer.html')
+	// 	.then(response => response.text())
+	// 	.then(htmlText => {
+	// 		// Insert the HTML content directly as the first child of the body
+	// 		document.body.insertAdjacentHTML('beforeend', htmlText);
+	// 	});
 
-
-fetch('./common/footer.html')
-	.then(response => response.text())
-	.then(data => {
-		// Insert the HTML content directly as the first child of the body
-		// document.body.insertAdjacentHTML('beforeend', data);
-		// document.getElementById('footer-placeholder').innerHTML = data;
+	// Add header as first child of the body
+	$.get('./common/header.html', function (htmlText) {
+		document.body.insertAdjacentHTML('afterbegin', htmlText);
 	});
+	// Add header as last child of the body
+	$.get('./common/footer.html', function (htmlText) {
+		document.body.insertAdjacentHTML('beforeend', htmlText);
+	});
+});
+
 
 function openSearchInput() {
-	console.log("openSearchInput..");
-	document.getElementById("searchInput")?.classList.toggle("display_Block")
+	document.getElementById("searchInput")?.classList.toggle("display_InlineBlock")
 }
-
-function navClicked() {
-	console.log("Nav clicked...");
-}
-
 function itemAClicked() {
 	console.log("itemAClicked...");
 }
@@ -34,3 +37,14 @@ function searchKeyPressed() {
 	} else
 		console.log("Key pressed is not Enter, doing nothing...");
 }
+
+function toggleSideBarMenu() {
+	$(".sideBarMenu").toggleClass("display_Block");
+}
+
+function emptySpaceAction() {
+	let $nav = $(this.event.target).closest("nav");
+	if (!$nav.is(this.event.target) && $nav.has(this.event.target).length === 0)
+		toggleSideBarMenu();
+}
+
