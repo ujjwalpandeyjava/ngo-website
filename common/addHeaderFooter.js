@@ -18,7 +18,7 @@ $(document).ready(() => {
 	});
 	// Add header as last child of the body
 	$.get('./common/footer.html', function (htmlText) {
-		document.body.insertAdjacentHTML('beforeend', htmlText);
+		// document.body.insertAdjacentHTML('beforeend', htmlText);
 	});
 });
 
