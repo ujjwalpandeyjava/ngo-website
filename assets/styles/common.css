@@ -18,6 +18,16 @@ a {
   color: var(--textColor);
 }
 
+::-moz-selection {
+  background-color: var(--themColor);
+  color: white;
+}
+
+::selection {
+  background-color: var(--themColor);
+  color: white;
+}
+
 .display_InlineBlock {
   display: inline-block !important;
 }

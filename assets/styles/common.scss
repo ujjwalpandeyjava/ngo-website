@@ -14,6 +14,11 @@ a {
 	text-decoration: none;
 	color: var(--textColor);
 }
+::selection {
+	background-color: var(--themColor);
+	color: white;
+}
+
 .display_InlineBlock {
 	display: inline-block !important;
 }

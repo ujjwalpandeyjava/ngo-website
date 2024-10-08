@@ -44,10 +44,12 @@
 						color: var(--themColor);
 						font-weight: bold;
 						font-size: 3rem;
+						margin: 6px 0;
 					}
 					& .text {
 						color: darkgrey;
 						line-height: 1.75rem;
+						text-transform: capitalize;
 					}
 				}
 			}
