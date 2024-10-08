@@ -1,5 +1,6 @@
-root {
+:root {
 	--textColor: black;
+	--themColor: #ff545a;
 }
 body {
 	position: relative;
@@ -49,7 +50,7 @@ a {
 				& a.eachMenu {
 					color: black;
 				}
-				& .fa {
+				& i {
 					cursor: pointer;
 				}
 				& input#searchInput {
@@ -90,6 +91,12 @@ a {
 	}
 	.sideBarMenuIcon {
 		padding: 1rem 1.5rem;
+		& i {
+			cursor: pointer;
+			background-color: var(--themColor);
+			padding: 5px 6px;
+			border-radius: 50%;
+		}
 	}
 
 	// Don't show the topBarMenu for small screens

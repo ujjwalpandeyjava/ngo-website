@@ -1,5 +1,6 @@
-root {
+:root {
   --textColor: black;
+  --themColor: #ff545a;
 }
 
 body {
@@ -57,7 +58,7 @@ a {
 #header .topBarMenu nav .menuOptions a.eachMenu {
   color: black;
 }
-#header .topBarMenu nav .menuOptions .fa {
+#header .topBarMenu nav .menuOptions i {
   cursor: pointer;
 }
 #header .topBarMenu nav .menuOptions input#searchInput {
@@ -95,6 +96,12 @@ a {
 }
 #header .sideBarMenuIcon {
   padding: 1rem 1.5rem;
+}
+#header .sideBarMenuIcon i {
+  cursor: pointer;
+  background-color: var(--themColor);
+  padding: 5px 6px;
+  border-radius: 50%;
 }
 @media (max-width: 760px) {
   #header .topBarMenu {

@@ -1,4 +1,53 @@
 #home {
-  min-height: 20vh;
-  background-color: orange;
+  min-height: 50vh;
+}
+#home .displayImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100dvh;
+}
+#home .displayImage > img {
+  width: 100%;
+  height: 100%;
+}
+#home .ourWork {
+  margin-top: 4rem;
+  padding: 1rem 2rem;
+}
+#home .ourWork .heading {
+  color: var(--themColor);
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin: 3rem 1rem;
+}
+#home .ourWork .workExamples {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem 1rem;
+}
+#home .ourWork .workExamples .eachWorkExample {
+  min-width: 300px;
+  max-width: 500px;
+  background-color: transparent;
+  padding: 12px 8px;
+  text-align: center;
+  margin: 0 1rem;
+}
+#home .ourWork .workExamples .eachWorkExample img {
+  width: 90%;
+  align-self: center;
+}
+#home .ourWork .workExamples .eachWorkExample .description .count {
+  color: var(--themColor);
+  font-weight: bold;
+  font-size: 3rem;
+}
+#home .ourWork .workExamples .eachWorkExample .description .text {
+  color: darkgrey;
+  line-height: 1.75rem;
 }/*# sourceMappingURL=index.css.map */

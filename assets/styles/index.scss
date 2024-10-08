@@ -1,4 +1,56 @@
 #home {
-	min-height: 20vh;
-	background-color: orange;
+	min-height: 50vh;
+	& .displayImage {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 100dvh;
+		& > img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	& .ourWork {
+		margin-top: 4rem;
+		padding: 1rem 2rem;
+		& .heading {
+			color: var(--themColor);
+			text-align: center;
+			font-size: 3rem;
+			font-weight: bolder;
+			margin: 3rem 1rem;
+		}
+		& .workExamples {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 2rem 1rem;
+			& .eachWorkExample {
+				min-width: 300px;
+				max-width: 500px;
+				background-color: transparent;
+				padding: 12px 8px;
+				// border: 1px solid black;s
+				text-align: center;
+				margin: 0 1rem;
+				& img {
+					width: 90%;
+					align-self: center;
+				}
+				& .description {
+					& .count {
+						color: var(--themColor);
+						font-weight: bold;
+						font-size: 3rem;
+					}
+					& .text {
+						color: darkgrey;
+						line-height: 1.75rem;
+					}
+				}
+			}
+		}
+	}
 }
