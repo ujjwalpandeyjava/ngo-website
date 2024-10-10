@@ -91,9 +91,9 @@
 					border-radius: 0 0 0.5rem 0.5rem;
 				}
 				& .description {
-					padding: 12px;
+					padding: 0.75rem 1.5rem;
 					text-align: left;
-					& .heading {
+					& .title {
 						font-weight: bolder;
 					}
 					& p {
@@ -101,6 +101,7 @@
 						margin: 1.25em auto;
 						font-weight: 400;
 						margin-bottom: 0;
+						color: gray;
 					}
 				}
 			}
@@ -172,6 +173,7 @@
 		}
 	}
 	& .galleryHouse {
+		padding: 0;
 	}
 	& .testimonials {
 		& .heading {

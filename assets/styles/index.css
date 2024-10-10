@@ -88,10 +88,10 @@
   border-radius: 0 0 0.5rem 0.5rem;
 }
 #home .empoweringSlums .empowering-cards .empowering-eachCard .description {
-  padding: 12px;
+  padding: 0.75rem 1.5rem;
   text-align: left;
 }
-#home .empoweringSlums .empowering-cards .empowering-eachCard .description .heading {
+#home .empoweringSlums .empowering-cards .empowering-eachCard .description .title {
   font-weight: bolder;
 }
 #home .empoweringSlums .empowering-cards .empowering-eachCard .description p {
@@ -99,6 +99,7 @@
   margin: 1.25em auto;
   font-weight: 400;
   margin-bottom: 0;
+  color: gray;
 }
 #home .charityHelp {
   text-align: center;
@@ -162,6 +163,9 @@
   background-color: var(--themColor);
   color: black;
   box-shadow: 0 0 4px var(--themColor);
+}
+#home .galleryHouse {
+  padding: 0;
 }
 #home .testimonials .heading {
   text-align: left;
