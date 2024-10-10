@@ -23,7 +23,16 @@ a {
 	background-color: var(--themColor);
 	color: white;
 }
-
+.lineClip3 {
+	// Text clipping
+	line-clamp: 2;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	font-size: 0.8em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 .display_InlineBlock {
 	display: inline-block !important;
 }
