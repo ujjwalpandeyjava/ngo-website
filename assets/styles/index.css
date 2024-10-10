@@ -171,4 +171,63 @@
   text-align: left;
   color: black;
   text-shadow: 0 1px gray, -1px 0 rgb(149, 32, 196);
+}
+#home .testimonials .testimonial-content {
+  text-align: center;
+  overflow: hidden;
+  max-width: 380px;
+  cursor: grab;
+}
+#home .testimonials .testimonial-content:active {
+  cursor: grabbing;
+}
+#home .testimonials .testimonial-content .title {
+  font-size: 1.5em;
+  margin: 2rem auto;
+}
+#home .testimonials .testimonial-content .title::before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: middle;
+  content: url("../images/doubleQuotes.png");
+  transform: rotate(180deg);
+  background-color: var(--themColor);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  color: #fff;
+  font-size: 20px;
+}
+#home .testimonials .testimonial-content .message {
+  color: black;
+}
+#home .testimonials .testimonial-content img {
+  margin-top: 2em;
+  width: 80px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transition: all 200ms ease;
+}
+#home .testimonials .testimonial-content img:hover {
+  scale: 1.1;
+}
+#home .testimonials .testimonial-content .name {
+  font-weight: bold;
+  margin: 8px auto;
+}
+#home .testimonials .testimonial-content .orgName {
+  color: var(--themColor);
+}
+@media (max-width: 580px) {
+  #home .testimonials .testimonial-content {
+    text-align: left;
+  }
 }/*# sourceMappingURL=index.css.map */

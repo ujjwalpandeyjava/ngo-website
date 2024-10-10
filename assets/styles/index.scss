@@ -21,7 +21,6 @@
 		}
 	}
 	& .ourWork {
-		// margin-top: 3rem;
 		& .workExamples {
 			display: flex;
 			flex-direction: row;
@@ -34,7 +33,6 @@
 				max-width: var(--imageMaxWidth);
 				background-color: transparent;
 				padding: 12px 8px;
-				// border: 1px solid black;s
 				text-align: center;
 				margin: 0 1rem;
 				& img {
@@ -182,6 +180,65 @@
 			text-shadow:
 				0 1px gray,
 				-1px 0 rgb(149, 32, 196);
+		}
+		& .testimonial-content {
+			text-align: center;
+			overflow: hidden;
+			max-width: 380px;
+			cursor: grab;
+			&:active {
+				cursor: grabbing;
+			}
+			& .title {
+				font-size: 1.5em;
+				margin: 2rem auto;
+				&::before {
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					font-style: normal;
+					font-variant: normal;
+					font-weight: normal;
+					line-height: 1;
+					vertical-align: middle;
+					content: url("../images/doubleQuotes.png");
+					transform: rotate(180deg);
+					background-color: var(--themColor);
+					height: 60px;
+					width: 60px;
+					border-radius: 50%;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					margin-right: 15px;
+					color: #fff;
+					font-size: 20px;
+				}
+			}
+			& .message {
+				color: black;
+			}
+			& img {
+				margin-top: 2em;
+				width: 80px;
+				aspect-ratio: 1/1;
+				border-radius: 50%;
+				transition: all 200ms ease;
+				&:hover {
+					scale: 1.1;
+				}
+			}
+			& .name {
+				font-weight: bold;
+				margin: 8px auto;
+			}
+			& .orgName {
+				color: var(--themColor);
+			}
+			@media (max-width: 580px) {
+				& {
+					text-align: left;
+				}
+			}
 		}
 	}
 }
