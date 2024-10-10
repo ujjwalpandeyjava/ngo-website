@@ -1,5 +1,16 @@
+.heading {
+  color: var(--themColor);
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin: 3rem 1rem;
+}
+
 #home {
   min-height: 50vh;
+}
+#home > div {
+  padding: 10px 10px 4rem 10px;
 }
 #home .displayImage {
   display: block;
@@ -10,17 +21,6 @@
 #home .displayImage > img {
   width: 100%;
   height: 100%;
-}
-#home .ourWork {
-  margin-top: 3rem;
-  padding: 1rem 2rem;
-}
-#home .ourWork .heading {
-  color: var(--themColor);
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bolder;
-  margin: 3rem 1rem;
 }
 #home .ourWork .workExamples {
   display: flex;
@@ -52,10 +52,6 @@
   color: darkgrey;
   line-height: 1.75rem;
   text-transform: capitalize;
-}
-#home .empoweringSlums {
-  font-family: Helvetica, sans-serif;
-  padding: 2rem 0.75rem;
 }
 #home .empoweringSlums .empoweringBy {
   font-size: 3em;
@@ -106,7 +102,6 @@
 }
 #home .charityHelp {
   text-align: center;
-  padding: 0 10px 3rem 10px;
 }
 #home .charityHelp .charityHelpHeading {
   font-size: 2.5em;
@@ -167,4 +162,9 @@
   background-color: var(--themColor);
   color: black;
   box-shadow: 0 0 4px var(--themColor);
+}
+#home .testimonials .heading {
+  text-align: left;
+  color: black;
+  text-shadow: 0 1px gray, -1px 0 rgb(149, 32, 196);
 }/*# sourceMappingURL=index.css.map */

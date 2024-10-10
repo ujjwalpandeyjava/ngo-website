@@ -4,6 +4,7 @@ let examplesTimer = {
 	2: null,
 	3: null
 }
+
 $(document).ready(function () {
 	$(window).on('scroll load', function () {
 		let $element = $('.workExamples');
@@ -67,7 +68,22 @@ $(document).ready(function () {
 			});
 		}, 2500); // Change every 1 second
 	}
+});
 
-
-
+//  Init image slider
+document.addEventListener('DOMContentLoaded', () => {
+	let sliderConfig = {
+		type: "loop",
+		drag: 'free',
+		snap: true,
+		perPage: 2,
+		height: '500px',
+		focus: 'center',
+		autoWidth: true,
+		gap: "50px",
+		autoPlay: true,
+		pauseOnHover: true
+	}
+	new Splide('#splide1', sliderConfig)?.mount();
+	// new Splide('#splide2', sliderConfig)?.mount();
 });
