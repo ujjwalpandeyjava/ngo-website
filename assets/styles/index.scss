@@ -11,7 +11,7 @@
 		}
 	}
 	& .ourWork {
-		margin-top: 4rem;
+		margin-top: 3rem;
 		padding: 1rem 2rem;
 		& .heading {
 			color: var(--themColor);
@@ -28,8 +28,8 @@
 			align-items: flex-start;
 			gap: 2rem 1rem;
 			& .eachWorkExample {
-				min-width: 300px;
-				max-width: 500px;
+				min-width: var(--imageMinWidth);
+				max-width: var(--imageMaxWidth);
 				background-color: transparent;
 				padding: 12px 8px;
 				// border: 1px solid black;s
@@ -50,6 +50,99 @@
 						color: darkgrey;
 						line-height: 1.75rem;
 						text-transform: capitalize;
+					}
+				}
+			}
+		}
+	}
+	& .empoweringSlums {
+		font-family: Helvetica, sans-serif;
+		padding: 2rem 0.75rem;
+		& .empoweringBy {
+			font-size: 3em;
+			text-align: center;
+			margin-top: 2.5rem;
+			margin-bottom: 3rem;
+			& #ways {
+				color: var(--themColor);
+				transition: transform 0.5s ease-in-out;
+				transform-origin: center;
+				overflow: hidden;
+				text-transform: capitalize;
+			}
+		}
+		& .empowering-cards {
+			display: flex;
+			gap: 2.5rem;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			justify-content: center;
+			& .empowering-eachCard {
+				min-width: var(--imageMinWidth);
+				max-width: var(--imageMaxWidth);
+				flex: 1;
+				border-color: #ccc;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+				& img {
+					width: 100%;
+					border-radius: 0 0 0.5rem 0.5rem;
+				}
+				& .description {
+					padding: 12px;
+					text-align: left;
+					& p {
+						line-height: 1.25em;
+					}
+				}
+			}
+		}
+	}
+	& .charityHelp {
+		text-align: center;
+		padding: 0 10px 3rem 10px;
+		& .charityHelpHeading {
+			font-size: 2.5em;
+			margin: 1em auto;
+		}
+		& .helpCardWays {
+			display: flex;
+			gap: 1rem;
+			& > div {
+				padding: 0.5rem 0.75rem;
+				border-radius: 4px;
+				box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.596);
+				box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+				& img {
+					max-width: 90px;
+					margin-bottom: 1rem;
+				}
+				& .title {
+					font-size: 1.5em;
+					padding-bottom: 12px;
+				}
+				& p {
+					line-height: 1.25rem;
+					margin: 1.25em auto;
+				}
+				& button {
+					text-transform: uppercase;
+					font-family: "Helvetica", Sans-serif;
+					background-color: #02010100;
+					border-style: solid;
+					border-width: 2px 2px 2px 2px;
+					border-color: var(--themColor);
+					margin: 0.75rem auto;
+					padding: 8px 30px 8px 30px;
+					font-size: 12px;
+					font-weight: 600;
+					border-radius: 1.5em;
+					cursor: pointer;
+					transition: all 200ms ease-in-out;
+					&:hover {
+						background-color: var(--themColor);
+						color: black;
+						box-shadow: 0 0 4px var(--themColor);
 					}
 				}
 			}

@@ -1,16 +1,21 @@
 :root {
   --textColor: black;
   --themColor: #ff545a;
+  --imageMaxWidth: 320px;
+  --imageMinWidth: 250px;
 }
 
 body {
   position: relative;
+  max-width: 1200px;
+  margin: auto;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
 }
 
 a {

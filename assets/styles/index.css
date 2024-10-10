@@ -12,7 +12,7 @@
   height: 100%;
 }
 #home .ourWork {
-  margin-top: 4rem;
+  margin-top: 3rem;
   padding: 1rem 2rem;
 }
 #home .ourWork .heading {
@@ -31,8 +31,8 @@
   gap: 2rem 1rem;
 }
 #home .ourWork .workExamples .eachWorkExample {
-  min-width: 300px;
-  max-width: 500px;
+  min-width: var(--imageMinWidth);
+  max-width: var(--imageMaxWidth);
   background-color: transparent;
   padding: 12px 8px;
   text-align: center;
@@ -52,4 +52,97 @@
   color: darkgrey;
   line-height: 1.75rem;
   text-transform: capitalize;
+}
+#home .empoweringSlums {
+  font-family: Helvetica, sans-serif;
+  padding: 2rem 0.75rem;
+}
+#home .empoweringSlums .empoweringBy {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+#home .empoweringSlums .empoweringBy #ways {
+  color: var(--themColor);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: center;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+#home .empoweringSlums .empowering-cards {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+#home .empoweringSlums .empowering-cards .empowering-eachCard {
+  min-width: var(--imageMinWidth);
+  max-width: var(--imageMaxWidth);
+  flex: 1;
+  border-color: #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+#home .empoweringSlums .empowering-cards .empowering-eachCard img {
+  width: 100%;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+#home .empoweringSlums .empowering-cards .empowering-eachCard .description {
+  padding: 12px;
+  text-align: left;
+}
+#home .empoweringSlums .empowering-cards .empowering-eachCard .description p {
+  line-height: 1.25em;
+}
+#home .charityHelp {
+  text-align: center;
+  padding: 0 10px 3rem 10px;
+}
+#home .charityHelp .charityHelpHeading {
+  font-size: 2.5em;
+  margin: 1em auto;
+}
+#home .charityHelp .helpCardWays {
+  display: flex;
+  gap: 1rem;
+}
+#home .charityHelp .helpCardWays > div {
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.596);
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+}
+#home .charityHelp .helpCardWays > div img {
+  max-width: 90px;
+  margin-bottom: 1rem;
+}
+#home .charityHelp .helpCardWays > div .title {
+  font-size: 1.5em;
+  padding-bottom: 12px;
+}
+#home .charityHelp .helpCardWays > div p {
+  line-height: 1.25rem;
+  margin: 1.25em auto;
+}
+#home .charityHelp .helpCardWays > div button {
+  text-transform: uppercase;
+  font-family: "Helvetica", Sans-serif;
+  background-color: rgba(2, 1, 1, 0);
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: var(--themColor);
+  margin: 0.75rem auto;
+  padding: 8px 30px 8px 30px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 1.5em;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+#home .charityHelp .helpCardWays > div button:hover {
+  background-color: var(--themColor);
+  color: black;
+  box-shadow: 0 0 4px var(--themColor);
 }/*# sourceMappingURL=index.css.map */

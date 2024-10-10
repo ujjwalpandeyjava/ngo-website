@@ -32,4 +32,42 @@ $(document).ready(function () {
 			}
 		}
 	});
+
+	let empowerWay = $("#ways");
+	let theWays = empowerWay.attr("data-wayList").trim().split(",");
+	let index = 0;
+
+	if (theWays.length > 0) {
+		// Show the first item immediately
+		empowerWay.fadeToggle(500, function () {
+			$(this).text(theWays[0].trim()).fadeToggle(500);
+		});
+		setInterval(() => {
+			index++;
+			if (index >= theWays.length)
+				index = 0; // Reset to the first item when reaching the end
+
+			// empowerWay.fadeOut(500, function () {
+			// 	$(this).text(theWays[index].trim()).fadeIn(500); // Change text and fade in smoothly
+			// });
+
+			// empowerWay.slideUp(500, function () {
+			// 	$(this).text(theWays[index].trim()).slideDown(500);
+			// });
+
+			// empowerWay.animate({ opacity: 0 }, 500, function() {
+			// 	$(this).text(theWays[index].trim()).animate({ opacity: 1 }, 500);
+			//   });
+
+			// empowerWay.toggle(500, function () {
+			// 	$(this).text(theWays[index].trim()).toggle(500);
+			// });
+			empowerWay.fadeToggle(500, function () {
+				$(this).text(theWays[index].trim()).fadeToggle(500);
+			});
+		}, 2500); // Change every 1 second
+	}
+
+
+
 });
