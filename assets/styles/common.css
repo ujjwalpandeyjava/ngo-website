@@ -115,18 +115,43 @@ a {
   background-color: white;
   height: 100%;
   width: 300px;
-  padding: 0.5rem 0.75rem;
   box-shadow: 10px 0px 25px -10px rgba(161, 126, 148, 0.7);
+  animation: slideInLeft 450ms forwards;
+  position: relative;
 }
-#header .sideBarMenu > nav a.eachMenu {
+#header .sideBarMenu > nav .searchArea input {
+  height: 3em;
   width: 100%;
+  display: block;
+  padding: 12px;
+  border: none;
+  box-shadow: 0 1px 3px 4px rgba(189, 189, 189, 0.7176470588);
+  background-color: white;
+  outline: none;
+}
+#header .sideBarMenu > nav .searchArea i {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  border: 0;
+  cursor: pointer;
+}
+#header .sideBarMenu > nav .links {
+  padding: 1.5em 1em 1em;
+  font-size: 0.75em;
+}
+#header .sideBarMenu > nav .links a.eachMenu {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
   outline: none;
   border: none;
-  cursor: pointer;
-  background-color: rgba(152, 152, 255, 0.322);
-  margin: 0.25rem 0rem;
+  padding: 0.5rem 0.75rem;
   border-bottom: 1px solid rgb(199, 199, 199);
-  padding: 0.5rem;
+  cursor: pointer;
+}
+#header .sideBarMenu > nav .links a.eachMenu:last-child {
+  border: none;
 }
 @media (min-width: 678px) {
   #header .sideBarMenu {
@@ -328,4 +353,15 @@ a {
 #footer .footer-part2 .importantPages a {
   margin-block: 1rem;
   color: white;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=common.css.map */

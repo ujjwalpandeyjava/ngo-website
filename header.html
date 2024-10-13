@@ -12,9 +12,9 @@
 				<a class="eachMenu" href="index.html">Home</a>
 				<a class="eachMenu" href="about.html">About Us</a>
 				<a class="eachMenu" href="faq.html">FAQ</a>
-				<a class="eachMenu" href="contact.html">Contact</a>
+				<a class="eachMenu" href="contact.html">Contact Us</a>
 				<input type="text" id="searchInput" placeholder="Search text" onkeypress="searchKeyPressed()" />
-				<div onclick="openSearchInput()">
+				<div class="searchIcon" onclick="openSearchInput()">
 					<i class="fa-solid fa-magnifying-glass"></i>
 				</div>
 			</div>
@@ -25,9 +25,16 @@
 	<div class="sideBarMenuIcon" onclick="toggleSideBarMenu()"><i class="fa-solid fa-bars"></i></div>
 	<div class="sideBarMenu" onclick="emptySpaceAction()">
 		<nav aria-label="hidden" role="navigation">
-			<a class="eachMenu" href="index.html">Home</a>
-			<a class="eachMenu" href="about.html">About</a>
-			<a class="eachMenu" href="contact.html">Contact</a>
+			<div class="searchArea">
+				<input type="text" onkeypress="searchKeyPressed()" placeholder="Search...">
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</div>
+			<div class="links">
+				<a class="eachMenu" href="index.html">Home</a>
+				<a class="eachMenu" href="about.html">About Us</a>
+				<a class="eachMenu" href="faq.html">FAQ</a>
+				<a class="eachMenu" href="contact.html">Contact Us</a>
+			</div>
 		</nav>
 	</div>
 </header>

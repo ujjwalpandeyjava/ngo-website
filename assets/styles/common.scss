@@ -107,17 +107,44 @@ a {
 			background-color: white;
 			height: 100%;
 			width: 300px;
-			padding: 0.5rem 0.75rem;
 			box-shadow: 10px 0px 25px -10px rgb(161 126 148 / 70%);
-			& a.eachMenu {
-				width: 100%;
-				outline: none;
-				border: none;
-				cursor: pointer;
-				background-color: rgba(152, 152, 255, 0.322);
-				margin: 0.25rem 0rem;
-				border-bottom: 1px solid rgb(199, 199, 199);
-				padding: 0.5rem;
+			animation: slideInLeft 450ms forwards;
+			position: relative;
+			.searchArea {
+				input {
+					height: 3em;
+					width: 100%;
+					display: block;
+					padding: 12px;
+					border: none;
+					box-shadow: 0 1px 3px 4px #bdbdbdb7;
+					background-color: white;
+					outline: none;
+				}
+				i {
+					position: absolute;
+					top: 12px;
+					right: 16px;
+					border: 0;
+					cursor: pointer;
+				}
+			}
+			& .links {
+				padding: 1.5em 1em 1em;
+				font-size: 0.75em;
+				a.eachMenu {
+					display: block;
+					width: 100%;
+					margin-bottom: 8px;
+					outline: none;
+					border: none;
+					padding: 0.5rem 0.75rem;
+					border-bottom: 1px solid rgb(199, 199, 199);
+					cursor: pointer;
+					&:last-child {
+						border: none;
+					}
+				}
 			}
 		}
 		// Don't show the sideBarMenu for the big screens
@@ -319,5 +346,17 @@ a {
 				color: white;
 			}
 		}
+	}
+}
+
+// Animations
+@keyframes slideInLeft {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
 	}
 }
