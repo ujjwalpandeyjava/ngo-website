@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./assets/styles/common.css">
+	<link rel="stylesheet" href="./assets/styles/common.css">
 	<link rel="stylesheet" href="./assets/styles/contactus.css">
 
 	<!-- Latest jQuery keep it on top -->
@@ -13,20 +13,69 @@
 	<!-- Common header and footer -->
 	<script src="./addHeaderFooter.js"></script>
 
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script> -->
+
 	<title>Contact</title>
 
 </head>
 
 <body>
 	<div id="contactUs">
-		<h1>Contact</h1>
-	</div>
+		<div class="abc">
+			<!-- 
+				<div class="contactUs-Heading-primary">Our Location</div>
+				<div>
+					<div onload="initialize()" id="map" style="width: 100%; height: 400px;"></div>
+				</div> 
+			-->
+			<div class="contactUs-Heading-secondary">
+				do you want to volunteer
+			</div>
+			<p>
+				Are you passionate about making a positive impact in the lives of others? Join us as a volunteer and be
+				part
+				of meaningful initiatives that uplift communities and create lasting change. Your dedication and support
+				can
+				make a world of difference. Join our team today and help us create a brighter tomorrow!
+			</p>
+			<div class="contactUs-Heading-primary">Drop us a line</div>
+			<p>
+				We'd love to hear from you!
+			</p>
+			<div class="form">
+				<div>
+					<input type="text" id="name" placeholder="Your name*" required>
+					<input type="email" id="email" placeholder="Your email*" required>
+				</div>
+				<div>
+					<input type="text" id="subject" placeholder="Subject" required>
+				</div>
+				<div>
+					<textarea id="description" name="description" rows="8" cols="50" placeholder="Message"></textarea>
+				</div>
+				<div>
+					<button onclick="submitForm()">Submit</button>
+				</div>
+			</div>
+		</div>
 
-	<!-- Personal font awesome kit -->
-	<script src="https://kit.fontawesome.com/57097ff76e.js" crossorigin="anonymous"></script>
+		<div class="donate">
+			<h3>Making A Difference</h3>
+			<h2>Donate to Help Poor</h2>
+			<p>
+				Your donation to Voice of Slum transforms lives. With your support, we provide essential resources,
+				education, and hope to underprivileged communities. Your generosity fuels our mission to uplift and
+				empower those in need, one life at a time. Join us in making a lasting impact and building a better
+				tomorrow for all.
+			</p>
+			<a href="#">Donate NOW</a>
+		</div>
 
-	<!-- This page js -->
-	<script src="./assets/scripts/contact.js"></script>
+		<!-- Personal font awesome kit -->
+		<script src="https://kit.fontawesome.com/57097ff76e.js" crossorigin="anonymous"></script>
+
+		<!-- This page js -->
+		<script src="./assets/scripts/contact.js"></script>
 </body>
 
 </html>

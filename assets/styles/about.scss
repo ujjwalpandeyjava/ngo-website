@@ -1,3 +1,23 @@
 #about {
-	background-color: blue;
+	.themeImg {
+		width: 100%;
+		max-width: 1000px;
+		margin-top: 4em;
+		margin-bottom: 5.5em;
+		text-align: center;
+	}
+	padding: 2em;
+	.text-content {
+		.text-content-heading {
+			font-weight: bolder;
+			font-size: 1.5em;
+			margin-bottom: 2em;
+			color: #084a5a;
+		}
+		text-align: center;
+		p {
+			margin-bottom: 1.5em;
+			font-size: 0.85em;
+		}
+	}
 }

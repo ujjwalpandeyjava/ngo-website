@@ -1,3 +1,102 @@
 #faq {
-	background-color: gold;
+	.faq-heading {
+		font-size: 2em;
+		text-align: center;
+		font-weight: bolder;
+		margin-block: 1em;
+	}
+
+	.faqs {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		gap: 1em;
+		padding: 1em;
+		min-width: 240px;
+		justify-content: flex-start;
+		align-items: flex-start;
+		.accordion {
+			width: 100%;
+			max-width: 600px;
+			border-radius: 5px;
+			overflow: hidden;
+			.accordion-item {
+				border: 1px solid #ebebeb;
+				border-radius: 8px;
+				margin-bottom: 0.5em;
+				.accordion-header {
+					background-color: rgba(245, 245, 245, 0.5);
+					border-bottom: 1px dotted rgba(245, 245, 245, 0.8235294118);
+					font-size: 1.25em;
+					font-weight: bold;
+					padding: 15px;
+					cursor: pointer;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					justify-content: space-between;
+					align-items: center;
+				}
+				.accordion-content {
+					max-height: 0;
+					overflow: hidden;
+					transition:
+						max-height 500ms ease,
+						padding 500ms ease;
+					padding: 0 15px;
+					background-color: #fff;
+				}
+				&.active .accordion-content {
+					max-height: 200px;
+					padding: 15px;
+				}
+				&.active span:last-child {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+	.needHelp {
+		.needHelp-heading {
+			font-size: 2em;
+			font-weight: bolder;
+			text-transform: capitalize;
+			text-align: center;
+			margin-block: 2.5em 1.5em;
+		}
+		& > p {
+			text-align: center;
+			margin-bottom: 2em;
+		}
+		.needHelp-ways {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: stretch;
+			justify-content: space-around;
+			padding: 2em;
+			gap: 2em;
+			@media (min-width: 678px) {
+				flex-direction: column;
+			}
+			.needHelp-eachWay {
+				flex: 1;
+				text-align: center;
+				padding: 1em 8px;
+				i {
+					font-size: 3em;
+					color: var(--themColor);
+					margin: auto;
+				}
+				.eachWay-head {
+					font-size: 2em;
+					font-weight: bolder;
+					margin: 0.5em auto 0.75em auto;
+				}
+				p {
+					color: gray;
+				}
+			}
+		}
+	}
 }

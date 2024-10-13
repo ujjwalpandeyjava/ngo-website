@@ -4,12 +4,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./assets/styles/common.css">
+	<link rel="stylesheet" href="./assets/styles/common.css">
 	<link rel="stylesheet" href="./assets/styles/faq.css">
 
 	<!-- Latest jQuery keep it on top -->
 	<script src="./assets/libraries/jquery-4.0.0-beta.2.min.js"></script>
-	
+
 	<!-- Common header and footer -->
 	<script src="./addHeaderFooter.js"></script>
 
@@ -18,11 +18,154 @@
 
 <body>
 	<div id="faq">
-		<h1>FAQ</h1>
+		<div class="faq-heading">Ask Us</div>
+
+		<div class="faqs">
+			<div class="accordion">
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span>What is Voice of Slum?</span>
+						<span><i class="fa-solid fa-angle-right"></i></span>
+					</div>
+					<div class="accordion-content">
+						<p>
+							Voice of Slum is a non-profit organization committed to empowering slum communities and
+							providing educational opportunities for children living in poverty.
+						</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span>How can I support Voice of Slum's mission?</span>
+						<span><i class="fa-solid fa-angle-right"></i></span>
+					</div>
+					<div class="accordion-content">
+						<p>
+							You can support Voice of Slum by donating, volunteering your time and skills, sponsoring a
+							child's education, or spreading awareness about our cause.
+						</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span>How are donations to Voice of Slum used?</span>
+						<span><i class="fa-solid fa-angle-right"></i></span>
+					</div>
+					<div class="accordion-content">
+						<p>
+							Donations to Voice of Slum are used to fund educational programs, vocational training,
+							community projects, and other initiatives aimed at improving the lives of slum children and
+							their families.
+						</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span>How does Voice of Slum contribute to children's education?</span>
+						<span><i class="fa-solid fa-angle-right"></i></span>
+					</div>
+					<div class="accordion-content">
+						<p>
+							Voice of Slum offers comprehensive educational programs designed to equip children from
+							marginalized backgrounds with the necessary skills and knowledge to thrive in society.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="accordion">
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span>How does Voice of Slum help slum children?</span>
+						<span><i class="fa-solid fa-angle-right"></i></span>
+					</div>
+					<div class="accordion-content">
+						<p>
+							Voice of Slum offers holistic education programs, vocational training, and community
+							engagement initiatives to uplift slum children and provide them with the tools they need for
+							a better future.
+						</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span>What sets Voice of Slum apart from other non-profit organizations?</span>
+						<span><i class="fa-solid fa-angle-right"></i></span>
+					</div>
+					<div class="accordion-content">
+						<p>
+							CoVoice of Slum prioritizes community involvement and tailors its programs to address the
+							specific needs and challenges faced by slum communities, ensuring sustainable and impactful
+							interventions.
+						</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span>Can I volunteer with Voice of Slum?</span>
+						<span><i class="fa-solid fa-angle-right"></i></span>
+					</div>
+					<div class="accordion-content">
+						<p>
+							Yes, Voice of Slum welcomes volunteers who are passionate about making a difference in the
+							lives of slum children. Contact us to learn more about volunteer opportunities.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="needHelp">
+			<div class="needHelp-heading">Still need help</div>
+			<p>
+
+				For any unresolved queries or further assistance, reach out to our dedicated support team.
+
+			</p>
+			<div class="needHelp-ways">
+				<div class="needHelp-eachWay">
+					<i class="fa-solid fa-hand-holding-dollar"></i>
+					<div class="eachWay-head">Donate Now</div>
+					<p>
+
+						Your donation to Voice of Slum is a direct investment in changing lives.
+
+					</p>
+				</div>
+				<div class="needHelp-eachWay">
+					<i class="fa-regular fa-comments"></i>
+					<div class="eachWay-head">Call Support</div>
+					<p>
+
+						Speak directly to a member of our support team for immediate assistance and guidance.
+
+					</p>
+				</div>
+				<div class="needHelp-eachWay">
+					<i class="fa-solid fa-people-arrows"></i>
+					<div class="eachWay-head">Chat with us</div>
+					<p>
+
+						Connect with us through chat for real-time support and quick responses to your inquiries.
+
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Personal font awesome kit -->
 	<script src="https://kit.fontawesome.com/57097ff76e.js" crossorigin="anonymous"></script>
+
+
+	<script>
+		document.querySelectorAll('.accordion-header').forEach(header => {
+			header.addEventListener('click', () => {
+				const accordionItem = header.parentElement;
+
+				// Toggle active class
+				accordionItem.classList.toggle('active');
+			});
+		});
+	</script>
 
 	<!-- This page js -->
 	<script src="./assets/scripts/faq.js"></script>
