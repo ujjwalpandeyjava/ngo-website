@@ -1,3 +1,5 @@
+$breakpoint-tablet: 678px;
+
 .heading {
 	color: var(--themColor);
 	text-align: center;
@@ -8,7 +10,7 @@
 #home {
 	min-height: 50vh;
 	& > div {
-		padding: 10px 10px 4rem 10px;
+		padding: 10px 14px 4rem 14px;
 	}
 	& .displayImage {
 		display: block;
@@ -35,6 +37,9 @@
 				padding: 12px 8px;
 				text-align: center;
 				margin: 0 1rem;
+				@media (max-width: $breakpoint-tablet) {
+					max-width: unset;
+				}
 				& img {
 					width: 90%;
 					align-self: center;
@@ -71,7 +76,7 @@
 		}
 		& .empowering-cards {
 			display: flex;
-			gap: 2.5rem;
+			gap: 2rem 1rem;
 			flex-direction: row;
 			flex-wrap: wrap;
 			align-items: stretch;
@@ -79,13 +84,11 @@
 			& .empowering-eachCard {
 				min-width: var(--imageMinWidth);
 				max-width: var(--imageMaxWidth);
-				flex: 1;
 				border-color: #ccc;
 				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
 				& img {
 					min-width: var(--imageMinWidth);
 					width: 100%;
-					max-width: var(--imageMaxWidth);
 					border-radius: 0 0 0.5rem 0.5rem;
 				}
 				& .description {
@@ -101,6 +104,9 @@
 						margin-bottom: 0;
 						color: gray;
 					}
+				}
+				@media (max-width: $breakpoint-tablet) {
+					max-width: unset;
 				}
 			}
 		}
@@ -120,10 +126,11 @@
 			flex-direction: row;
 			gap: 3rem 1rem;
 			& > div {
-				padding: 0.5rem 0.75rem;
+				padding: 1rem 0.75rem;
 				border-radius: 4px;
 				box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.596);
 				box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+				width: 100%;
 				max-width: calc(var(--imageMaxWidth) * 0.75);
 				border: 1px solid rgba(161, 161, 161, 0.267);
 				transition: all 150ms ease;
@@ -167,11 +174,25 @@
 						box-shadow: 0 0 4px var(--themColor);
 					}
 				}
+				@media (max-width: $breakpoint-tablet) {
+					max-width: unset;
+				}
+			}
+			@media (max-width: $breakpoint-tablet) {
+				padding: 0.75rem 1rem;
 			}
 		}
 	}
 	& .galleryHouse {
 		padding: 0;
+		.splide__slide {
+			display: block;
+			width: 80%;
+			margin: auto;
+			img {
+				width: 100%;
+			}
+		}
 	}
 	& .testimonials {
 		& .heading {
@@ -185,6 +206,7 @@
 			text-align: center;
 			overflow: hidden;
 			max-width: 380px;
+			margin: auto;
 			cursor: grab;
 			&:active {
 				cursor: grabbing;
@@ -220,6 +242,7 @@
 			& img {
 				margin-top: 2em;
 				width: 80px;
+				max-width: 80px;
 				aspect-ratio: 1/1;
 				border-radius: 50%;
 				transition: all 200ms ease;

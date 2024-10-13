@@ -77,14 +77,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		type: "loop",
 		drag: 'free',
 		snap: true,
-		perPage: 2,
 		focus: 'center',
 		autoHeight: true,
 		autoWidth: true,
 		gap: "50px",
 		autoPlay: true,
-		pauseOnHover: true,
-		pagination: true
+		interval: 2000,
+		pauseOnHover: false,
+		pagination: true,
+		perMove: 1,
+		clones: 3,
+		perPage: 4,
+		breakpoints: { 		// For screens smaller than
+			1024: {
+				perPage: 2,
+			},
+			768: {
+				// destroy: true
+			}
+		}
 	}
 	new Splide('#splide1', sliderConfig)?.mount();
 	// new Splide('#splide2', sliderConfig)?.mount();

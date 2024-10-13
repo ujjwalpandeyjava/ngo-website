@@ -1,9 +1,12 @@
+$breakpoint-tablet: 678px;
+
 :root {
 	--textColor: black;
 	--themColor: #ff545a;
 	--imageMaxWidth: 320px;
 	--imageMinWidth: 250px;
 }
+
 body {
 	position: relative;
 	max-width: 1200px;
@@ -43,10 +46,13 @@ a {
 	position: sticky;
 	top: 0;
 	display: block;
-	background-color: white;
+	z-index: 99999;
 	.topBarMenu {
 		padding: 0.25rem 0.75rem;
 		display: block;
+		background-color: white;
+		box-shadow: 0 10px -5px gray;
+		box-shadow: 0px 1px 27px -10px gray;
 		nav {
 			display: flex;
 			flex-direction: row;
@@ -83,6 +89,10 @@ a {
 				}
 			}
 		}
+		// Don't show the topBarMenu for small screens
+		@media (max-width: $breakpoint-tablet) {
+			display: none;
+		}
 	}
 	.sideBarMenu {
 		display: none;
@@ -96,6 +106,7 @@ a {
 			height: 100%;
 			width: 300px;
 			padding: 0.5rem 0.75rem;
+			box-shadow: 10px 0px 25px -10px rgb(161 126 148 / 70%);
 			& a.eachMenu {
 				width: 100%;
 				outline: none;
@@ -107,6 +118,10 @@ a {
 				padding: 0.5rem;
 			}
 		}
+		// Don't show the sideBarMenu for the big screens
+		@media (min-width: $breakpoint-tablet) {
+			display: none !important;
+		}
 	}
 	.sideBarMenuIcon {
 		padding: 1rem 1.5rem;
@@ -116,24 +131,38 @@ a {
 			padding: 5px 6px;
 			border-radius: 50%;
 		}
-	}
-
-	// Don't show the topBarMenu for small screens
-	@media (max-width: 760px) {
-		.topBarMenu {
+		// Don't show the sideBarMenu for the big screens
+		@media (min-width: $breakpoint-tablet) {
 			display: none;
-		}
-	}
-	// Don't show the sideBarMenu for the big screens
-	@media (min-width: 761px) {
-		.sideBarMenuIcon {
-			display: none;
-		}
-		.sideBarMenu {
-			display: none !important;
 		}
 	}
 }
 
 #footer {
+	background-color: #2d2d2d;
+	border-bottom: 5px solid var(--themColor);
+	border-radius: 0 0 8px 8px;
+	color: gray;
+	& .footer-part1 {
+		display: flex;
+		padding: 1rem;
+		border-bottom: 1px solid #4b4b55;
+	}
+	& .footer-part2 {
+		padding: 1rem;
+		.copyright {
+			text-align: center;
+			a {
+				color: white;
+			}
+		}
+		.importantPages {
+			text-align: center;
+			margin-top: 1rem;
+			a {
+				margin-block: 1rem;
+				color: white;
+			}
+		}
+	}
 }

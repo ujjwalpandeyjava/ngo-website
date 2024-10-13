@@ -55,11 +55,14 @@ a {
   position: sticky;
   top: 0;
   display: block;
-  background-color: white;
+  z-index: 99999;
 }
 #header .topBarMenu {
   padding: 0.25rem 0.75rem;
   display: block;
+  background-color: white;
+  box-shadow: 0 10px -5px gray;
+  box-shadow: 0px 1px 27px -10px gray;
 }
 #header .topBarMenu nav {
   display: flex;
@@ -95,6 +98,11 @@ a {
 #header .topBarMenu nav .menuOptions input#searchInput:focus {
   outline: 1px solid rgba(190, 190, 190, 0.6);
 }
+@media (max-width: 678px) {
+  #header .topBarMenu {
+    display: none;
+  }
+}
 #header .sideBarMenu {
   display: none;
   position: fixed;
@@ -108,6 +116,7 @@ a {
   height: 100%;
   width: 300px;
   padding: 0.5rem 0.75rem;
+  box-shadow: 10px 0px 25px -10px rgba(161, 126, 148, 0.7);
 }
 #header .sideBarMenu > nav a.eachMenu {
   width: 100%;
@@ -119,6 +128,11 @@ a {
   border-bottom: 1px solid rgb(199, 199, 199);
   padding: 0.5rem;
 }
+@media (min-width: 678px) {
+  #header .sideBarMenu {
+    display: none !important;
+  }
+}
 #header .sideBarMenuIcon {
   padding: 1rem 1.5rem;
 }
@@ -128,16 +142,37 @@ a {
   padding: 5px 6px;
   border-radius: 50%;
 }
-@media (max-width: 760px) {
-  #header .topBarMenu {
-    display: none;
-  }
-}
-@media (min-width: 761px) {
+@media (min-width: 678px) {
   #header .sideBarMenuIcon {
     display: none;
   }
-  #header .sideBarMenu {
-    display: none !important;
-  }
+}
+
+#footer {
+  background-color: #2d2d2d;
+  border-bottom: 5px solid var(--themColor);
+  border-radius: 0 0 8px 8px;
+  color: gray;
+}
+#footer .footer-part1 {
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid #4b4b55;
+}
+#footer .footer-part2 {
+  padding: 1rem;
+}
+#footer .footer-part2 .copyright {
+  text-align: center;
+}
+#footer .footer-part2 .copyright a {
+  color: white;
+}
+#footer .footer-part2 .importantPages {
+  text-align: center;
+  margin-top: 1rem;
+}
+#footer .footer-part2 .importantPages a {
+  margin-block: 1rem;
+  color: white;
 }/*# sourceMappingURL=common.css.map */
