@@ -1,4 +1,6 @@
 $breakpoint-tablet: 678px;
+$footer-min-width: 180px;
+$footer-text-color: #999999;
 
 :root {
 	--textColor: black;
@@ -145,8 +147,161 @@ a {
 	color: gray;
 	& .footer-part1 {
 		display: flex;
-		padding: 1rem;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+		padding: 3rem 0;
 		border-bottom: 1px solid #4b4b55;
+		gap: 1em;
+		& > div {
+			flex: 1;
+			padding: 1rem;
+		}
+		.newsLetter {
+			border-right: 1px solid #4b4b55;
+			flex: 3;
+			.orgLogo {
+				overflow: hidden;
+				img {
+					width: 100%;
+					max-width: 100px;
+					color: white;
+					fill: white;
+					aspect-ratio: 1/1;
+					transition: all ease 100ms;
+					&:hover {
+						filter: drop-shadow(0 0 1px #b9b9b9);
+					}
+				}
+			}
+			.text {
+				text-transform: capitalize;
+				font-size: 0.75em;
+				color: #666666;
+				margin-top: 1.25rem;
+				margin-bottom: 0.75rem;
+				margin-left: 1rem;
+			}
+			.emailArea {
+				display: inline-block;
+				position: relative;
+				font-size: large;
+				height: 1.25rem;
+				width: 80%;
+				margin: 4px auto;
+				text-align: left;
+				input {
+					position: absolute;
+					width: 100%;
+					inset: 0;
+					background-color: white;
+					color: var(--textColor);
+					font-size: 0.75em;
+					border: 1px solid white;
+					outline: none;
+					padding-inline: 0.75em;
+					height: 2rem;
+					border-radius: 50px;
+					&:active,
+					&:focus {
+						border: 2px solid var(--themColor);
+					}
+				}
+				button {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					top: 0;
+					background-color: var(--themColor);
+					color: black;
+					text-transform: uppercase;
+					padding-inline: 1em;
+					font-weight: 400;
+					height: 2rem;
+					font-size: 0.75em;
+					border-radius: 50px;
+					outline: none;
+					border: 1px solid var(--themColor);
+					border: none;
+					cursor: pointer;
+					&:active,
+					&:hover,
+					&:focus {
+						background-color: green;
+					}
+				}
+			}
+			min-width: calc($footer-min-width * 2);
+			@media (max-width: calc($footer-min-width * 5)) {
+				border-bottom: 1px dotted #4b4b55;
+			}
+			@media (max-width: calc($footer-min-width * 3.5)) {
+				border-bottom: 1px solid #4b4b55;
+				border-right: unset;
+			}
+		}
+		.aboutUs {
+			display: none; // Temporary
+			min-width: $footer-min-width;
+			padding-left: 2.5rem;
+			a {
+				display: block;
+				margin-top: 14px;
+				font-size: 0.75em;
+				color: $footer-text-color;
+			}
+		}
+		.supportUs {
+			min-width: $footer-min-width;
+			.donateNow {
+				color: $footer-text-color;
+				font-size: small;
+				margin-bottom: 1.2rem;
+			}
+			img {
+				margin-left: 0.75em;
+				cursor: pointer;
+			}
+		}
+		.getInTouch {
+			min-width: $footer-min-width;
+			padding-right: 1.5em;
+			.contactNo {
+				color: var(--themColor);
+				margin-bottom: 1.25em;
+			}
+			.house-no,
+			.house-street,
+			.house-local {
+				line-height: 1.5em;
+			}
+
+			.house-email {
+				margin: 1.5em auto 1.75em 0.5em;
+			}
+			.socials {
+				display: flex;
+				gap: 1em;
+				& > div {
+					background-color: var(--themColor);
+					border-radius: 50%;
+					padding: 8px;
+					display: grid;
+					place-items: center;
+					color: white;
+					&:hover {
+						scale: 1.1;
+						color: rgb(25, 25, 85);
+					}
+				}
+			}
+		}
+		& .footer-headers {
+			color: white;
+			margin-bottom: 1.75em;
+			text-transform: capitalize;
+		}
 	}
 	& .footer-part2 {
 		padding: 1rem;

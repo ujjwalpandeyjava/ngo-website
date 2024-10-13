@@ -48,3 +48,6 @@ function emptySpaceAction() {
 		toggleSideBarMenu();
 }
 
+function submitEmail() {
+	console.log("submitEmail...");
+}
