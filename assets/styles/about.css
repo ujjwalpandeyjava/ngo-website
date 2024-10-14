@@ -8,6 +8,9 @@
   margin-bottom: 5.5em;
   text-align: center;
 }
+#about .themeImg img {
+  width: 100%;
+}
 #about .text-content {
   text-align: center;
 }
