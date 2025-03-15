@@ -180,7 +180,7 @@ a {
 		justify-content: flex-start;
 		padding: 3rem 0;
 		border-bottom: 1px solid #4b4b55;
-		gap: 1em;
+		gap: 0.5em;
 		& > div {
 			flex: 1;
 			padding: 1rem;
@@ -269,7 +269,7 @@ a {
 			}
 		}
 		.aboutUs {
-			display: none; // Temporary
+			// display: none; // Temporary
 			min-width: $footer-min-width;
 			padding-left: 2.5rem;
 			a {
@@ -294,32 +294,37 @@ a {
 		.getInTouch {
 			min-width: $footer-min-width;
 			padding-right: 1.5em;
-			.contactNo {
-				color: var(--themColor);
-				margin-bottom: 1.25em;
-			}
-			.house-no,
-			.house-street,
-			.house-local {
-				line-height: 1.5em;
-			}
+			& > .is-overflow {
+				overflow: auto;
+				padding-right: 2em;
+				padding-bottom: 1.2em;
+				.contactNo {
+					color: var(--themColor);
+					margin-bottom: 1.25em;
+				}
+				.house-no,
+				.house-street,
+				.house-local {
+					line-height: 1.5em;
+				}
 
-			.house-email {
-				margin: 1.5em auto 1.75em 0.5em;
-			}
-			.socials {
-				display: flex;
-				gap: 1em;
-				& > div {
-					background-color: var(--themColor);
-					border-radius: 50%;
-					padding: 8px;
-					display: grid;
-					place-items: center;
-					color: white;
-					&:hover {
-						scale: 1.1;
-						color: rgb(25, 25, 85);
+				.house-email {
+					margin: 1.5em auto 1.75em 0.5em;
+				}
+				.socials {
+					display: flex;
+					gap: 1em;
+					& > div {
+						background-color: var(--themColor);
+						border-radius: 50%;
+						padding: 8px;
+						display: grid;
+						place-items: center;
+						color: white;
+						&:hover {
+							scale: 1.1;
+							color: rgb(25, 25, 85);
+						}
 					}
 				}
 			}

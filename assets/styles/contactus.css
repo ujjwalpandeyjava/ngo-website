@@ -75,19 +75,24 @@
   min-width: 200px;
   flex: 1;
   text-align: center;
+  position: relative;
 }
-#contactUs .donate h3 {
+#contactUs .donate section {
+  position: sticky;
+  top: 5em;
+}
+#contactUs .donate section h3 {
   color: #084a5a;
   font-size: 20px;
 }
-#contactUs .donate h2 {
+#contactUs .donate section h2 {
   color: #666666;
   margin-bottom: 1rem;
 }
-#contactUs .donate p {
+#contactUs .donate section p {
   line-height: 1.5em;
 }
-#contactUs .donate a {
+#contactUs .donate section a {
   border: 1px solid #ebebeb;
   padding: 0.7em 1.3em;
   min-width: 170px;
